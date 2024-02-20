@@ -24,3 +24,5 @@ obj1.set('pos2', 13)
 obj1.set('pos3', 14)
 print(obj1.get('pos2'))
 
+
+
