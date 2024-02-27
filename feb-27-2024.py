@@ -1,3 +1,9 @@
+# Good morning! Here's your coding interview problem for today.
+
+# This problem was asked by Indeed.
+
+# Given a 32-bit positive integer N, determine whether it is a power of four in faster than O(log N) time.
+
 from math import *
 def solve(num):
     power_of_2 = log2(num)

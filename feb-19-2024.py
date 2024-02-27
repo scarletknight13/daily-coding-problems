@@ -1,3 +1,10 @@
+# Good morning! Here's your coding interview problem for today.
+# This problem was asked by Dropbox.
+# Implement an efficient string matching algorithm.
+# That is, given a string of length N and a pattern of length k, write a program that searches for the pattern in the string with less than O(N * k) worst-case time complexity.
+# If the pattern is found, return the start index of its location. If not, return False.
+
+
 def solve(pattern, s):
     n, m = len(pattern), len(s)
     dp = [[0 for i in range(m+1)] for i in range(n+1)]
