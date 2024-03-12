@@ -19,7 +19,7 @@ def solve(arr):
             if i == 0:
                 prefix[i] = True if arr[i] == 'T' else False
             else:
-                perform_op(arr[i - 1], prefix[i - 1], prefix[i])
+                prefix[i] = perform_op(arr[i - 1], prefix[i - 1], arr[i])
         else:
             prefix[i] = prefix[i - 1]
     
@@ -28,10 +28,11 @@ def solve(arr):
             if i == n - 1:
                 suffix[i] = True if arr[i] == 'T' else False
             else:
-                perform_op(arr[i - 1], suffix[i - 1], suffix[i])
+                suffix[i] = perform_op(arr[i - 1], suffix[i - 1], arr[i])
         else:
             suffix[i] = suffix[i - 1]
     
+    print(prefix)
     ans = 1
     for i in range(0, n, 2):
         prev = prefix[i - 1] if i > 0 else None
